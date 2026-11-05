@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# The assistant costs a model call for anything it has not already answered, and a crawler
+# asking it questions is spending that for nothing. Everything a crawler needs is in the
+# HTML, which is why the site was built to work with the page alone.
+Disallow: /api/
+
+Sitemap: https://vanshajkakkar.com/sitemap.xml

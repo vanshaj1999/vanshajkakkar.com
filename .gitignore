@@ -1,0 +1,27 @@
+# Never commit a key
+.env
+.env.*
+!.env.example
+
+# Nothing here has dependencies, but keep the guard in case that ever changes
+node_modules/
+package-lock.json
+
+# Local state and noise
+*.log
+.DS_Store
+.wrangler/
+cv-requests.jsonl
+
+# The confidentiality blocklist itself. It names the things that must never ship,
+# so committing it publishes exactly the list it exists to protect.
+.audit-patterns.txt
+
+# Working material, not part of the deployed site
+_parked/
+base/
+
+# The CV itself. It is sent on request and approved one at a time, so it must never
+# sit at a guessable URL. public/ is served verbatim by Pages, so it cannot live there.
+private/
+*.pdf

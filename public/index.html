@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanshaj Kakkar, AI Software Engineer</title>
+<meta name="description" content="Vanshaj Kakkar, AI software engineer across Sydney, Melbourne and Adelaide. Machine learning and LLM systems taken all the way into production, built to say so when they do not know.">
+<link rel="canonical" href="https://vanshajkakkar.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vanshajkakkar.com/">
+<meta property="og:title" content="Vanshaj Kakkar, AI Software Engineer">
+<meta property="og:description" content="I build systems that know when to say I don't know. Ask the agent on the page about the work.">
+<meta property="og:site_name" content="Vanshaj Kakkar">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vanshaj Kakkar, AI Software Engineer">
+<meta name="twitter:description" content="I build systems that know when to say I don't know. Ask the agent on the page about the work.">
+<meta name="theme-color" content="#0B0D10">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/SchibstedGrotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/AzeretMono.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/app.css">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a class="brand" href="#top"><b>Vanshaj Kakkar</b><span>AI Software Engineer</span></a>
+  <div class="links">
+    <a href="#work">Work</a><a class="hide-sm" href="#education">Experience</a><a href="#ask">Ask</a><a href="#cv-request">CV</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas class="field" id="field" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <p class="role"><b>AI Software Engineer</b><span>Sydney · Melbourne · Adelaide</span></p>
+    <h1>I build systems that know when to say <em>I don't know.</em></h1>
+    <p class="lede">Machine learning and LLM systems, taken all the way into production. Every dot here is a sentence my agent can answer from. Move through it, or ask it something.</p>
+    <div class="ask-wrap" id="demo">
+      <form class="ask" id="ask" autocomplete="off">
+        <label class="vh" for="ask-input">Ask about my work</label>
+        <input id="ask-input" name="q" maxlength="500" placeholder="Ask about my work" required>
+        <button type="submit" id="ask-send">Ask</button>
+      </form>
+      <div class="chips" id="ask-chips"></div>
+    </div>
+    <p class="count" id="field-count"></p>
+  </div>
+  <div class="readout" id="readout" aria-hidden="true"></div>
+  <section class="answer" id="answer" aria-live="polite" hidden>
+    <div class="answer-head"><span class="answer-state" id="answer-state"></span><button type="button" class="answer-x" id="answer-x" aria-label="Close the answer">Close</button></div>
+    <p class="answer-q" id="answer-q"></p>
+    <div class="answer-a" id="answer-a"></div>
+  </section>
+</header>
+
+<main>
+
+<section class="paper" id="work">
+  <div class="wrap">
+    <p class="eyebrow">Work</p>
+    <h2>What I've built</h2>
+    <p class="sub">Systems that made it into real use, and the problem each one had to solve.</p>
+
+    <dl class="facts">
+      <div><dt>70+</dt><dd>Projects worked on, solo and in teams</dd></div>
+      <div><dt>15</dt><dd>AI and machine learning systems built</dd></div>
+      <div><dt>2+</dt><dd>Years shipping AI into production</dd></div>
+    </dl>
+
+    <p class="served"><span class="eyebrow">Delivered for</span> Agri-tech · Government departments · National industry associations · Large employers · Education · Media and events</p>
+
+    <div class="layers">
+      <div>
+        <h3>LLM systems</h3>
+        <p>Retrieval, prompt design, model routing and evaluation, including real-time voice and avatar agents running against a custom model.</p>
+        <ul class="stack"><li>Claude</li><li>Bedrock</li><li>RAG</li><li>pgvector</li><li>Whisper</li><li>ElevenLabs</li></ul>
+      </div>
+      <div>
+        <h3>Machine learning</h3>
+        <p>Computer vision models trained, evaluated and deployed to run on the device rather than in a data centre.</p>
+        <ul class="stack"><li>PyTorch</li><li>YOLO</li><li>TFLite</li><li>ONNX</li></ul>
+      </div>
+      <div>
+        <h3>Data engineering</h3>
+        <p>Pipelines that take messy event data and turn it into something you can actually query and trust.</p>
+        <ul class="stack"><li>Python</li><li>PostgreSQL</li><li>MongoDB</li><li>pgvector</li><li>Pandas</li></ul>
+      </div>
+      <div>
+        <h3>Getting it shipped</h3>
+        <p>The APIs, CI pipelines, cloud infrastructure and interfaces that turn a model into something people can use.</p>
+        <ul class="stack"><li>FastAPI</li><li>Docker</li><li>CI/CD</li><li>AWS</li><li>Azure</li><li>GCP</li><li>TypeScript</li></ul>
+      </div>
+    </div>
+
+    <details class="breakdown">
+      <summary>What that work breaks down into</summary>
+      <div class="breakdown-grid">
+        <div><b>Computer vision and OCR</b><span>Reading text and spotting objects in photos, in real products</span></div>
+        <div><b>Machine learning, end to end</b><span>Training, evaluating and shipping models, not just notebooks</span></div>
+        <div><b>On-device and edge AI</b><span>Models that run on a phone or a small box with no internet</span></div>
+        <div><b>Retrieval</b><span>Finding the right passage before the model answers</span></div>
+        <div><b>LLM applications</b><span>Agent orchestration, tool use, streaming and choosing the right model per question</span></div>
+        <div><b>Multimodal systems</b><span>Reading images and text together in one system</span></div>
+        <div><b>Speech and audio</b><span>Speech to text and text to speech inside live products</span></div>
+        <div><b>Privacy and AI security</b><span>Keeping personal data out of prompts, logs and third-party models</span></div>
+        <div><b>Cost engineering</b><span>Making AI cheap enough to leave switched on</span></div>
+        <div><b>Cloud architecture</b><span>AWS, from the deploy pipeline through to the monthly bill</span></div>
+        <div><b>Analytics and measurement</b><span>Event pipelines, and making the numbers trustworthy</span></div>
+        <div><b>Media and signal pipelines</b><span>Video, audio and sensor data at volume</span></div>
+      </div>
+    </details>
+
+    <h2 class="group">AI and machine learning <span>06 featured · 08 in all</span></h2>
+  </div>
+</section>
+
+<article class="band">
+  <div class="band-in">
+    <figure class="fig"><canvas data-fig="trace" aria-hidden="true"></canvas><figcaption>Fig. 01 · One question, every layer</figcaption></figure>
+    <div class="band-copy">
+      <p class="eyebrow">01 / 06 · LLM systems</p>
+      <p class="kicker">Flagship · in production</p>
+      <h3>A talking avatar that answers from a company's own documents</h3>
+      <p>A conversational avatar on a kiosk and on the web, backed by Claude, with hybrid retrieval over the client's own material and speech going both ways. It runs in two modes, and the difference is who does the work: in full mode the vendor handles the speech recognition, the model and the voice. In lite mode it renders video only, at half the per-minute rate, and everything else is ours. The kiosk runs on lite.</p>
+      <p>The retrieval is genuinely hybrid: a dense vector search over pgvector alongside Postgres full-text ranking, fused so an exact procedure name and a vaguely worded question both land. Source links travel with each passage, so an answer cites something real.</p>
+      <ul class="stack"><li>Claude</li><li>Bedrock</li><li>pgvector</li><li>LiveAvatar</li><li>Whisper</li><li>ElevenLabs</li><li>Polly</li><li>Rekognition</li><li>FastAPI</li></ul>
+    </div>
+  </div>
+  <details class="decisions">
+    <summary>Decisions worth showing <span>8</span></summary>
+    <ul>
+      <li><b>The model answers from the documents, except on safety</b><span>A document-authority rule with a deliberate carve-out, so it never invents policy but never withholds a safety answer either</span></li>
+      <li><b>An in-process vector cache</b><span>Holds a persona's embeddings in memory to delete a trans-Pacific round trip on every question</span></li>
+      <li><b>Halving the vendor bill meant building what it stopped doing</b><span>The cheaper mode was not a switch to flip. It needed a whole speech stack on our side: the visitor's own phone as the microphone, streaming speech to text, and our own voice. Cheaper is a trade, not a discount</span></li>
+      <li><b>A visual glitch diagnosed frame by frame</b><span>The avatar appeared to cut to a different shot mid-sentence. Scene detection over a screen recording found exactly three single-frame jumps, all lining up with pose commands, which showed the renderer hard-cuts on a pose change rather than blending. Two of the three were ours to remove</span></li>
+      <li><b>It answers in the language you ask in</b><span>Speech in and out across languages, which is the point on a floor where not everyone reads English</span></li>
+      <li><b>Referential query rewriting</b><span>Because "say that again in Hindi" retrieved on its own five words, and a helmet question got answered with the nine signs of burnout</span></li>
+      <li><b>Found nothing is not the same as could not run</b><span>A three-state fallback, so only a genuine failure ever dumps the whole corpus at someone</span></li>
+      <li><b>Authorisation in the API, never the prompt</b><span>Short-lived single-audience tokens for tool calls, on the assumption a model will eventually be talked into trying something it was not granted</span></li>
+    </ul>
+  </details>
+</article>
+
+<article class="band flip">
+  <div class="band-in">
+    <figure class="fig"><canvas data-fig="diagnose" aria-hidden="true"></canvas><figcaption>Fig. 02 · Not sure, so it asks for a closer photo</figcaption></figure>
+    <div class="band-copy">
+      <p class="eyebrow">02 / 06 · Machine learning</p>
+      <p class="kicker">No signal, so it runs on the phone</p>
+      <h3>Diagnosis from a photograph, offline</h3>
+      <p>Vision models that identify disease from a field photo and run on the phone itself, because the people using it have no signal. Built the dataset and annotation pipeline behind it, then the training, evaluation and on-device export.</p>
+      <ul class="stack"><li>PyTorch</li><li>YOLO</li><li>TFLite</li><li>ONNX</li><li>CoreML</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="band">
+  <div class="band-in">
+    <figure class="fig"><canvas data-fig="scanner" aria-hidden="true"></canvas><figcaption>Fig. 03 · Two passes must agree</figcaption></figure>
+    <div class="band-copy">
+      <p class="eyebrow">03 / 06 · Applied vision</p>
+      <p class="kicker">Reports what it could not read</p>
+      <h3>Reading documents, and admitting the gaps</h3>
+      <p>Extracts structured fields from a photographed document across four scripts and checks them against thirteen legal requirements. Two passes must agree before a field is confirmed, so it reports what it could not read instead of guessing.</p>
+      <ul class="stack"><li>Apple Vision</li><li>ML Kit</li><li>C#</li><li>Swift</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="band flip">
+  <div class="band-in">
+    <figure class="fig"><canvas data-fig="edge" aria-hidden="true"></canvas><figcaption>Fig. 04 · One persistent session, every frame</figcaption></figure>
+    <div class="band-copy">
+      <p class="eyebrow">04 / 06 · Edge AI</p>
+      <p class="kicker">The obvious way raced itself</p>
+      <h3>Inference on an accelerator at the edge</h3>
+      <p>A camera and accelerator running detection continuously at the edge rather than round-tripping to a data centre, built as a persistent streaming service after the obvious approach turned out to be racing itself.</p>
+      <ul class="stack"><li>Python</li><li>Hailo</li><li>ONNX</li><li>Linux</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="band">
+  <div class="band-in">
+    <figure class="fig"><canvas data-fig="router" aria-hidden="true"></canvas><figcaption>Fig. 05 · Escalate only when the question needs it</figcaption></figure>
+    <div class="band-copy">
+      <p class="eyebrow">05 / 06 · Cost engineering</p>
+      <p class="kicker">The cheapest model that can answer</p>
+      <h3>Making the model bill predictable</h3>
+      <p>A router that picks the cheapest model capable of answering and escalates only when the question needs it, with every decision logged. Alongside it, spend caps that pause the expensive call while keeping search working.</p>
+      <ul class="stack"><li>Bedrock</li><li>DynamoDB</li><li>TypeScript</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="band flip">
+  <div class="band-in">
+    <figure class="fig"><canvas data-fig="library" aria-hidden="true"></canvas><figcaption>Fig. 06 · Captioned and tagged as it lands</figcaption></figure>
+    <div class="band-copy">
+      <p class="eyebrow">06 / 06 · AI platform</p>
+      <p class="kicker">Search by what is in the file</p>
+      <h3>A media library that understands what is in it</h3>
+      <p>A platform for images, video, audio and 3D models that captions, tags, groups faces and makes everything searchable by what is actually in the file rather than by who remembers the filename.</p>
+      <ul class="stack"><li>FastAPI</li><li>Bedrock</li><li>Aurora</li><li>S3</li><li>CDK</li></ul>
+    </div>
+  </div>
+</article>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="rows">
+      <details class="row">
+        <summary><span class="n">07</span><span class="t">An assistant that shows its sources</span><span class="a">Retrieval</span><span class="ar" aria-hidden="true"></span></summary>
+        <div class="row-body"><p>Ask a question in text, by voice or with a photo and get an answer grounded in an uploaded knowledge base, with real links back to where it came from rather than invented ones.</p><ul class="stack"><li>pgvector</li><li>HNSW</li><li>FastAPI</li><li>Whisper</li><li>Claude</li></ul></div>
+      </details>
+      <details class="row">
+        <summary><span class="n">08</span><span class="t">An illustrated character that talks back</span><span class="a">Avatar systems</span><span class="ar" aria-hidden="true"></span></summary>
+        <div class="row-body"><p>The same conversation delivered through a drawn character rather than a filmed one. It starts from illustrated stills of a person, then the parts that have to move are rigged separately, the eyes and the mouth, so they can be driven by the conversation in the browser. No 3D head, no render farm, and a client gets a character in their own house style.</p><ul class="stack"><li>TypeScript</li><li>React</li><li>2D rigging</li><li>Illustrated stills</li></ul></div>
+      </details>
+    </div>
+
+    <h2 class="group">Platform, data and engineering <span>07 systems</span></h2>
+
+    <article class="card">
+      <figure class="fig"><canvas data-fig="fleet" aria-hidden="true"></canvas><figcaption>Fig. 07 · One tablet, the whole brain</figcaption></figure>
+      <div class="card-copy">
+        <p class="eyebrow">09 · Real time</p>
+        <p class="kicker"><mark>No internet on the bus</mark></p>
+        <h3>A fleet of headsets in sync with no internet</h3>
+        <p>A synchronised film running across a fleet of VR headsets on a moving bus, with no laptop, no server and usually no signal. One tablet is the whole brain, with native networking plugins written twice.</p>
+        <ul class="stack"><li>Swift</li><li>Java</li><li>WebSocket</li><li>Unity</li></ul>
+      </div>
+    </article>
+
+    <div class="rows">
+      <details class="row">
+        <summary><span class="n">10</span><span class="t">Turning messy events into answers</span><span class="a">Data engineering</span><span class="ar" aria-hidden="true"></span></summary>
+        <div class="row-body"><p>Millions of behavioural events arriving from browsers, mobile apps and headsets. The pipeline deduplicates them, rebuilds the sessions behind them and makes the result queryable, feeding dashboards and written summaries.</p><ul class="stack"><li>Python</li><li>MongoDB</li><li>AWS Lambda</li><li>TypeScript</li></ul></div>
+      </details>
+      <details class="row">
+        <summary><span class="n">11</span><span class="t">Estimating groundwater depth nationally</span><span class="a">Data science</span><span class="ar" aria-hidden="true"></span></summary>
+        <div class="row-body"><p>A national estimate of depth to groundwater at any location, built from 35,875 monitoring bores with readings spanning two decades. Every answer ships with a confidence value derived from how many bores are nearby and how far away they are, so the estimate carries its own reliability rather than pretending to be a measurement.</p><ul class="stack"><li>Python</li><li>Pandas</li><li>Geospatial</li><li>CSV</li></ul></div>
+      </details>
+      <details class="row">
+        <summary><span class="n">12</span><span class="t">The infrastructure under all of it</span><span class="a">Cloud architecture</span><span class="ar" aria-hidden="true"></span></summary>
+        <div class="row-body"><p>The cloud estate behind these platforms: 38 serverless functions, 43 storage buckets and 19 edge distributions, defined as code across eight stacks in two regions. I ran the audit that mapped it, attributed the cost project by project, and cut the bill where the numbers justified it.</p><p>The delivery path underneath: CI on GitLab and GitHub Actions, Docker and Compose so local and production run the same image, Lambda shipped as a zip or a container image when it outgrows the size limit, and front ends pushed as an S3 sync with a CloudFront invalidation.</p><ul class="stack"><li>AWS</li><li>CDK</li><li>Docker</li><li>GitLab CI</li><li>Lambda</li><li>CloudFront</li><li>Aurora</li></ul></div>
+      </details>
+      <details class="row">
+        <summary><span class="n">13</span><span class="t">A document intake portal in three days</span><span class="a">Serverless</span><span class="ar" aria-hidden="true"></span></summary>
+        <div class="row-body"><p>Upload a document, get an AI summary, topics and tag suggestions, plus automatic detection of which existing document this one probably replaces. Scaffold to a passing end-to-end run in three days.</p><ul class="stack"><li>DynamoDB</li><li>S3</li><li>SES</li><li>Bedrock</li><li>Next.js</li></ul></div>
+      </details>
+      <details class="row">
+        <summary><span class="n">14</span><span class="t">A Mac app for 360 video metadata</span><span class="a">Tools</span><span class="ar" aria-hidden="true"></span></summary>
+        <div class="row-body"><p>A native macOS app that stamps spherical metadata onto video without re-encoding, built on a Google tool that had been unmaintained since 2018 and needed porting forward first.</p><ul class="stack"><li>Swift</li><li>SwiftUI</li><li>Python</li></ul></div>
+      </details>
+      <details class="row">
+        <summary><span class="n">15</span><span class="t">An AI guide and tutor built into training courses</span><span class="a">Course AI</span><span class="ar" aria-hidden="true"></span></summary>
+        <div class="row-body"><p>Built for a national industry association's online courses on emergency animal disease, two systems in one, over about three months alongside the developer who built the course modules. An agentic guide tracks where a learner is and brings up the right explanation, resource or video when they get stuck, by text or voice. A tutor answers only from the course material, with a relevance floor so an off-topic question never comes back dressed up as one, and recent turns are kept so a short follow-up actually resolves.</p><p>Moved both onto Claude on Bedrock after the original provider's account ran dry and the bot kept reporting success while quietly giving a canned answer; semantic search had never run and the chunker was dropping words. A 50-check suite now runs before every release, and reading the learner conversations caught a course module not marking a section complete, a course fault rather than an assistant one, passed on to the module's developer. Runs with Secrets Manager, least-privilege IAM, budget and error alarms, a staging environment and GitHub Actions OIDC deploys with automatic rollback. The course ships as SCORM packages on the client's LMS.</p><ul class="stack"><li>Claude</li><li>Bedrock</li><li>Titan Embeddings</li><li>Polly</li><li>Transcribe</li><li>GitHub Actions</li></ul></div>
+      </details>
+    </div>
+
+    <div class="also">
+      <p class="eyebrow">Also involved in</p>
+      <ul>
+        <li><b>Annotation and labelling</b><span>Built an in-house annotation tool for the vision work, and used Roboflow alongside it. Supporting infrastructure rather than a project in its own right</span></li>
+        <li><b>Real-time and device work</b><span>Synchronised video across a fleet of headsets with no network, native plugins in Swift and Java, headless build pipelines</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="education">
+  <div class="wrap">
+    <p class="eyebrow">Education</p>
+    <h2>Where the theory came from</h2>
+    <p class="sub">The work above came first on this page for a reason. The study is what made it possible to reason about the models rather than only call them.</p>
+
+    <div class="edu">
+      <div>
+        <span class="yr">2023</span>
+        <div><h3>Master of Data Science</h3><p class="where">The University of Adelaide</p>
+        <p>Statistics, machine learning and the maths under the models. Where the training, evaluation and error analysis in the work above comes from.</p></div>
+      </div>
+      <div>
+        <span class="yr">2021</span>
+        <div><h3>Bachelor of Information Technology, Cloud Computing</h3><p class="where">Deakin University</p>
+        <p>Networking, distributed systems and cloud architecture. Where the other half comes from: the APIs, the deploy pipelines and the bill at the end of the month.</p></div>
+      </div>
+    </div>
+
+    <div class="patent">
+      <p class="eyebrow">Patent</p>
+      <h3>Smart Voice Assisted Learning Device for Visually Impaired Students</h3>
+      <p class="where">Indian patent application 202411052784&#8202;A &nbsp;·&nbsp; filed 10 July 2024 &nbsp;·&nbsp; published 26 July 2024 &nbsp;·&nbsp; one of seven named inventors</p>
+      <p>A voice-controlled learning device that pairs speech recognition and on-device AI with a tactile Braille display, so a student can work through material by voice and touch rather than by sight. Nine claims. The same ground as the speech work above, which is why it is here rather than filed away. It is a published application, not a granted patent.</p>
+    </div>
+
+    <div class="also three">
+      <div>
+        <p class="eyebrow">Award</p>
+        <ul><li><b>Adelaide Graduate Award</b><span>The University of Adelaide, 2023</span></li></ul>
+      </div>
+      <div>
+        <p class="eyebrow">Certifications</p>
+        <ul>
+          <li><b>Cisco CCNA Routing and Switching</b><span>Four-course Cisco Networking Academy curriculum: Introduction to Networks &nbsp;·&nbsp; Routing and Switching Essentials &nbsp;·&nbsp; Scaling Networks &nbsp;·&nbsp; Connecting Networks</span></li>
+          <li><b>Career Essentials in Data Analysis</b><span>Microsoft and LinkedIn</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Community</p>
+        <ul><li><b>Mentor and student ambassador</b><span>Study Adelaide, helping students move from study into technology work here</span></li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band closing" id="cv-request">
+  <div class="band-in">
+    <div class="band-copy">
+      <p class="eyebrow">My CV</p>
+      <h2>Ask and I will send it over</h2>
+      <p>Send me a quick note and my CV will reach you shortly.</p>
+      <p class="contact" id="contact"><span class="eyebrow">Or get in touch</span><a class="btn" href="mailto:Vanshaj.kakkar@gmail.com">Email me</a></p>
+    </div>
+    <form class="cvform" id="cv-form">
+      <label>Your name<input name="name" required maxlength="80" autocomplete="name"></label>
+      <label>Email<input name="email" type="email" required maxlength="120" autocomplete="email"></label>
+      <label>Company<input name="company" maxlength="80" autocomplete="organization"></label>
+      <label>Role you are hiring for<input name="role" maxlength="80"></label>
+      <label class="full">Anything else<textarea name="note" rows="2" maxlength="400"></textarea></label>
+      <div class="full cvactions"><button class="btn lime" type="submit" id="cv-send">Send request</button><span class="cvnote" id="cv-note"></span></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot"><span>Vanshaj Kakkar · AI Software Engineer · Sydney, Melbourne, Adelaide</span><a href="#cv-request">Request my CV</a></footer>
+
+<script type="module" src="/assets/main.js"></script>
+</body>
+</html>

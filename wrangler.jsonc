@@ -1,0 +1,49 @@
+{
+  // Cloudflare merged Pages into Workers, so this deploys as a Worker with static
+  // assets rather than a Pages project. Same result, same free tier: public/ is served
+  // straight from the edge and the Worker only runs for a request no asset matches,
+  // which in practice means /api/ask and /api/cv-request.
+  "name": "vanshajkakkar-website",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-27",
+
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    // A wrong URL gets the site's own 404 page rather than a bare Cloudflare one.
+    "not_found_handling": "404-page"
+  },
+
+  // Free inside 10,000 neurons a day, and it is what layer 3 of the assistant runs on.
+  // No key, no card, no third party: the model runs in this same account.
+  "ai": { "binding": "AI" },
+
+  "observability": { "enabled": true },
+
+  /* Counters, the daily neuron budget, and CV requests. The id belongs in this file
+     rather than in the dashboard: for a Worker deployed by wrangler this config is the
+     source of truth, so a binding added through the dashboard is dropped by the next
+     deploy. A namespace id is an identifier, not a credential. */
+  "kv_namespaces": [
+    { "binding": "DEMO_KV", "id": "<your-kv-namespace-id>" }
+  ],
+
+  /* Secrets are the opposite and must never appear here. They are stored encrypted by
+     Cloudflare and survive a deploy, so they are set once in the dashboard under
+     Settings -> Variables and Secrets:
+
+       RESEND_API_KEY     notifies Vanshaj when someone asks for the CV
+       DEMO_SECRET        signs the session token
+       TURNSTILE_SECRET   splits the verified and unverified budget pools
+       OPENAI_API_KEY     optional, only if a paid model is ever worth it
+
+     Everything below is a plain identifier and is public by nature. */
+  "vars": {
+    "DEMO_MODEL": "gpt-5-nano",
+    "CV_NOTIFY_TO": "you@example.com",
+    /* Resend's test sender. It can only deliver to the address on the Resend account,
+       which is exactly the constraint this needs: the only person ever emailed here is
+       Vanshaj. Swap to a verified address on the real domain once it is registered. */
+    "CV_NOTIFY_FROM": "onboarding@resend.dev"
+  }
+}

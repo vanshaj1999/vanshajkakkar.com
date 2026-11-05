@@ -1,0 +1,19 @@
+services:
+  site:
+    build: .
+    image: vanshajkakkar-site:local
+    container_name: vanshajkakkar-site
+    ports:
+      - "4321:4321"
+    # The one place a key lives. Copy .env.example to .env and fill it in, or leave
+    # the file out entirely and the demo runs on the cache alone.
+    env_file:
+      - path: .env
+        required: false
+    # Short form, so a variable set in the shell overrides .env and one that is not
+    # set is simply left unset rather than blanking what .env supplied.
+    environment:
+      - OPENAI_API_KEY
+      - DEMO_MODEL
+      - DEMO_SECRET
+    restart: unless-stopped
